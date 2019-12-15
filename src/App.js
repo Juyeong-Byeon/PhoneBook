@@ -1,16 +1,11 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { hot } from 'react-hot-loader';
 import Contact from './Contact';
+import ContactCreate from './ContactCreate';
 
 class App extends React.Component{
   
-  
-    
-
-  
-
   render(){
     let style={fontSize:'5em',backgroundColor:'royalblue' ,color:'white'};
     return (
@@ -19,6 +14,7 @@ class App extends React.Component{
     <div>
       <Contact/>
     </div>
+   
     </div>
       );
   }
