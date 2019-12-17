@@ -10,9 +10,9 @@ class App extends React.Component{
     let style={fontSize:'5em',backgroundColor:'royalblue' ,color:'white'};
     return (
     <div>
-    <div style={style}>hello!</div>
+    <div class='App-header '>Phone Book</div>
     <div>
-      <Contact/>
+      <Contact />
     </div>
    
     </div>

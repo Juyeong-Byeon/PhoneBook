@@ -1,5 +1,26 @@
+html{
+background-color: rgb(243, 243, 243);
+
+}
+input{
+
+  width:20em;
+  height:2em;
+  border-color: rgba(0,0,0,0);
+  border-radius: 0.2em;
+  background-color: rgba(20, 17, 39, 0.329);
+  font-size: 0.6em;
+  margin-bottom: 1em;
+  color: aliceblue;
+  
+
+}
 .App {
   text-align: center;
+  font-size: 1.5em;
+  border-color: steelblue;
+  border-width: 1em;
+  
 }
 
 .App-logo {
@@ -14,13 +35,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color:royalblue;
+  height: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 5em;
   color: white;
 }
 
@@ -35,4 +56,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.contactList{
+   border-color: rgba(32, 44, 54, 0.466);
+  border-width: 0.1em;
+  border-style: solid;
+  background-color: rgba(192, 192, 192, 0.445);
+}
+.contactList:hover{
+  border-color: rgba(95, 117, 134, 0.466);
+ border-width: 0.1em;
+ border-style: solid;
+ background-color: rgba(227, 232, 243, 0.945);
+}
+
+.createContact{
+
+  border-color: steelblue;
+  border-width: 1%;
+  border-style: solid;
+
+}
+.contactdetail{
+  border-color:steelblue;
+  border-width: 1%;
+  border-bottom-width: .1em;
+  border-style: solid;
 }
