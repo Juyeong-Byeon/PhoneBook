@@ -14,6 +14,9 @@ export default class ContactCreate extends React.Component{
 
         this.handleChange=this.handleChange.bind(this);
         this.handleClick=this.handleClick.bind(this);
+        this.handleKeyPress=this.handleKeyPress.bind(this);                                                                                                                                                                          
+
+        
     }
 
  
@@ -31,21 +34,30 @@ export default class ContactCreate extends React.Component{
     }
 
     handleClick(){
+        
         const Contact={
             name:this.state.name,
             phone:this.state.phone
         }
-        if(this.state.name==""||this.state.phone==""){
+        if(this.state.name===""||this.state.phone===""){
             alert('값을 완전히 입력하세요');
             return;
         }else{
-        this.props.onCreate(Contact);
+            this.nameInput.focus();  
+            this.props.onCreate(Contact);
         }
+
 
         this.setState({
             name:'',
             phone:''
+
         });
+
+    }
+
+    handleKeyPress(e){
+        if(e.charCode==13)this.handleClick();
 
     }
 
@@ -57,9 +69,9 @@ export default class ContactCreate extends React.Component{
         <div class='createContact'>
             <h2>Create Contact</h2>
             <p>
-                <input type='text' name='name' placeholder= 'name' value={this.state.name} onChange={this.handleChange}></input>
+                <input type='text' name='name' placeholder= 'name' value={this.state.name} onChange={this.handleChange} ref={ref=>{this.nameInput=ref}}></input>
                 <br/>
-                <input type='text' name='phone' placeholder='phone Number' value={this.state.phone} onChange={this.handleChange}></input>
+                <input type='text' name='phone' placeholder='phone Number' value={this.state.phone} onChange={this.handleChange} onKeyPress={this.handleKeyPress}></input>
                 <br/>
                 <button onClick={this.handleClick}>Input</button>
                
